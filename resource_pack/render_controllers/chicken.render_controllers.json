@@ -1,0 +1,136 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.chicken.v3": {
+      "arrays": {
+        "textures": {
+          "Array.textures": [
+            "Texture.t0_0",
+            "Texture.t0_1",
+            "Texture.t0_2",
+            "Texture.t0_3",
+            "Texture.t0_4",
+            "Texture.t0_5",
+            "Texture.t0_6",
+            "Texture.t0_7",
+            "Texture.t0_8",
+            "Texture.t0_9",
+            "Texture.t0_10",
+            "Texture.t0_11",
+            "Texture.t0_12",
+            "Texture.t0_13",
+            "Texture.t0_14",
+            "Texture.t0_15",
+            "Texture.t0_16",
+            "Texture.t1_0",
+            "Texture.t1_1",
+            "Texture.t1_2",
+            "Texture.t1_3",
+            "Texture.t1_4",
+            "Texture.t1_5",
+            "Texture.t1_6",
+            "Texture.t1_7",
+            "Texture.t1_8",
+            "Texture.t1_9",
+            "Texture.t1_10",
+            "Texture.t1_11",
+            "Texture.t1_12",
+            "Texture.t1_13",
+            "Texture.t1_14",
+            "Texture.t1_15",
+            "Texture.t1_16",
+            "Texture.t2_0",
+            "Texture.t2_1",
+            "Texture.t2_2",
+            "Texture.t2_3",
+            "Texture.t2_4",
+            "Texture.t2_5",
+            "Texture.t2_6",
+            "Texture.t2_7",
+            "Texture.t2_8",
+            "Texture.t2_9",
+            "Texture.t2_10",
+            "Texture.t2_11",
+            "Texture.t2_12",
+            "Texture.t2_13",
+            "Texture.t2_14",
+            "Texture.t2_15",
+            "Texture.t2_16"
+          ],
+          "Array.baby_textures": [
+            "Texture.b0_0",
+            "Texture.b0_1",
+            "Texture.b0_2",
+            "Texture.b0_3",
+            "Texture.b0_4",
+            "Texture.b0_5",
+            "Texture.b0_6",
+            "Texture.b0_7",
+            "Texture.b0_8",
+            "Texture.b0_9",
+            "Texture.b0_10",
+            "Texture.b0_11",
+            "Texture.b0_12",
+            "Texture.b0_13",
+            "Texture.b0_14",
+            "Texture.b0_15",
+            "Texture.b0_16",
+            "Texture.b1_0",
+            "Texture.b1_1",
+            "Texture.b1_2",
+            "Texture.b1_3",
+            "Texture.b1_4",
+            "Texture.b1_5",
+            "Texture.b1_6",
+            "Texture.b1_7",
+            "Texture.b1_8",
+            "Texture.b1_9",
+            "Texture.b1_10",
+            "Texture.b1_11",
+            "Texture.b1_12",
+            "Texture.b1_13",
+            "Texture.b1_14",
+            "Texture.b1_15",
+            "Texture.b1_16",
+            "Texture.b2_0",
+            "Texture.b2_1",
+            "Texture.b2_2",
+            "Texture.b2_3",
+            "Texture.b2_4",
+            "Texture.b2_5",
+            "Texture.b2_6",
+            "Texture.b2_7",
+            "Texture.b2_8",
+            "Texture.b2_9",
+            "Texture.b2_10",
+            "Texture.b2_11",
+            "Texture.b2_12",
+            "Texture.b2_13",
+            "Texture.b2_14",
+            "Texture.b2_15",
+            "Texture.b2_16"
+          ]
+        },
+        "geometries": {
+          "Array.geos": [
+            "Geometry.default",
+            "Geometry.warm",
+            "Geometry.cold"
+          ]
+        }
+      },
+      "geometry": "query.is_baby ? Geometry.baby : Array.geos[v.index]",
+      "materials": [
+        {
+          "*": "v.is_cold ? Material.cold : Material.default"
+        },
+        {
+          "leg*": "Material.legs"
+        }
+      ],
+      "textures": [
+        "query.is_baby ? Array.baby_textures[v.index * 17 + v.dye] : Array.textures[v.index * 17 + v.dye]"
+      ]
+    }
+  }
+}

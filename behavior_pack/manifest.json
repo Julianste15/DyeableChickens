@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Dyeable Chickens",
+    "description": "Dye chickens with all 16 dyes. Works on adults, babies and every climate variant.",
+    "uuid": "5dac5bad-d362-4705-b93e-f90aca0372ae",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 50]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "1c15bb3d-31b5-456e-9160-2f56768de1d0",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    }
+  ],
+  "metadata": {
+    "authors": ["Julianste15"],
+    "product_type": "addon"
+  }
+}
