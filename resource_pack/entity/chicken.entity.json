@@ -143,7 +143,8 @@
           "t.variant = query.property('minecraft:climate_variant');",
           "v.index = (t.variant == 'temperate') ? 0 : ((t.variant == 'warm') ? 1 : 2);",
           "v.is_cold = t.variant == 'cold';",
-          "v.dye = query.property('dyeable:color');"
+          "v.dye = query.property('dyeable:color');",
+          "v.tex = v.index * 17 + v.dye;"
         ],
         "scale": "query.is_baby ? 2.0 : 1.0"
       },

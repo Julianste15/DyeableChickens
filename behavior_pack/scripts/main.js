@@ -61,3 +61,21 @@ function dyeChicken(player, target) {
 world.afterEvents.playerInteractWithEntity.subscribe((event) => {
   dyeChicken(event.player, event.target);
 });
+
+world.afterEvents.itemUse.subscribe((event) => {
+  const item = event.itemStack;
+  if (!item || !DYE_COLORS.has(item.typeId)) return;
+
+  let hits;
+  try {
+    hits = event.source.getEntitiesFromViewDirection({ maxDistance: 6 });
+  } catch (error) {
+    return;
+  }
+
+  if (hits.length === 0) return;
+  const target = hits[0].entity;
+  if (target && target.typeId === "minecraft:chicken") {
+    dyeChicken(event.source, target);
+  }
+});

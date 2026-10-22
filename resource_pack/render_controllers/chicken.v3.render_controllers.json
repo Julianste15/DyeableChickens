@@ -129,7 +129,7 @@
         }
       ],
       "textures": [
-        "query.is_baby ? Array.baby_textures[v.index * 17 + v.dye] : Array.textures[v.index * 17 + v.dye]"
+        "query.is_baby ? Array.baby_textures[v.tex] : Array.textures[v.tex]"
       ]
     }
   }
