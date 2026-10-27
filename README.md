@@ -1,8 +1,8 @@
 # Dyeable Chickens
 
-Dye any chicken with the 16 dyes of Minecraft. The color is stored on the chicken, so it survives reloads, and babies inherit the color of their parents.
+Dye any chicken with the 16 dyes of Minecraft. The color is stored on the chicken, so it survives reloads, and babies inherit the color of their parents. Colorful chickens for every farm.
 
-![Dyeable Chickens](docs/banner.png)
+![Dyeable Chickens](docs/cover.png)
 
 ## Features
 
@@ -69,7 +69,7 @@ resource_pack/
   entity/chicken.entity.json     # textures for every climate/age/color
   render_controllers/chicken.render_controllers.json
   textures/entity/chicken/dye/   # 96 tinted textures
-docs/                            # banner and preview
+docs/                            # cover, icon and texture preview
 dist/DyeableChickens.mcaddon     # ready to install
 ```
 
